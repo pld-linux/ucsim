@@ -1,5 +1,5 @@
-Summary:	Microcontrollers simulator.
-Summary(pl):	Symulator mikrokontrolerów.
+Summary:	Microcontrollers simulator
+Summary(pl):	Symulator mikrokontrolerów
 Name:		ucsim
 Version:	0.2.38
 Release:	1
@@ -11,10 +11,10 @@ Group(pl):	X11/Aplikacje
 Source0:	http://mazsola.iit.uni-miskolc.hu/~drdani/embedded/s51/download/unix/%{name}-%{version}.tar.gz
 Patch0:		ucsim-make.patch
 URL:		http://mazsola.iit.uni-miskolc.hu/~drdani/embedded/s51/
-BuildRequires:	libstdc++-devel
+BuildRequires:	autoconf
 BuildRequires:	ncurses-devel
 BuildRequires:	ncurses-ext
-BuildRequires:	gcc-c++
+BuildRequires:	libstdc++-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
