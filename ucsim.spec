@@ -1,15 +1,15 @@
 Summary:	Microcontrollers simulator
 Summary(pl):	Symulator mikrokontrolerów
 Name:		ucsim
-Version:	0.3.1
-Release:	2
-Epoch:		1
+Version:	0.5.0
+Release:	0.1
+#Epoch:		1
 License:	GPL
 Group:		X11/Applications
-Source0:	http://mazsola.iit.uni-miskolc.hu/~drdani/embedded/s51/download/unix/%{name}-%{version}.tar.gz
+Source0:	http://mazsola.iit.uni-miskolc.hu/~drdani/embedded/s51/download/unix/devel/%{name}-%{version}-pre2.tar.bz2
 # Source0-md5:	9de42afa62a2f33263a3482547aa5d96
-Patch0:		%{name}-make.patch
-Patch1:		%{name}-newcmdcl.patch
+#Patch0:		%{name}-make.patch
+#Patch1:		%{name}-newcmdcl.patch
 URL:		http://mazsola.iit.uni-miskolc.hu/~drdani/embedded/s51/
 BuildRequires:	autoconf
 BuildRequires:	ncurses-devel >= 5.2
@@ -25,9 +25,9 @@ uCsim mo¿e byæ u¿ywany do emulacji mikrokontrolerków. Wspiera on rodzinê
 MCS51. Obs³uga AVR oraz Z80 jest aktualnie rozwijana.
 
 %prep
-%setup -q
-%patch0 -p1
-%patch1 -p1
+%setup -q -n %{name}-%{version}-pre2
+#%patch0 -p1
+#%patch1 -p1
 
 %build
 %{__autoconf}
@@ -37,9 +37,11 @@ MCS51. Obs³uga AVR oraz Z80 jest aktualnie rozwijana.
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT \
-	docdir=%{_docdir}/%{name}-%{version}
+#%{__make} install \
+#	DESTDIR=$RPM_BUILD_ROOT \
+#	docdir=%{_docdir}/%{name}-%{version}
+install -d $RPM_BUILD_ROOT%{_bindir}
+install s51.src/s51 hc08.src/shc08 avr.src/savr $RPM_BUILD_ROOT%{_bindir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
