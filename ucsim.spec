@@ -27,7 +27,7 @@ MCS51. Obs³uga AVR oraz Z80 jest aktualnie rozwijana.
 %patch0 -p1
 
 %build
-autoconf
+%{__autoconf}
 %configure
 %{__make}
 
