@@ -12,8 +12,7 @@ Source0:	http://mazsola.iit.uni-miskolc.hu/~drdani/embedded/s51/download/unix/%{
 Patch0:		ucsim-make.patch
 URL:		http://mazsola.iit.uni-miskolc.hu/~drdani/embedded/s51/
 BuildRequires:	autoconf
-BuildRequires:	ncurses-devel
-BuildRequires:	ncurses-ext
+BuildRequires:	ncurses-devel >= 5.2
 BuildRequires:	libstdc++-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
