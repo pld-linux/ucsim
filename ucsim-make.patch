@@ -1,16 +1,6 @@
 diff -urN ucsim-0.2.38.org/Makefile ucsim-0.2.38/Makefile
 --- ucsim-0.2.38.org/Makefile	Fri Feb 16 17:16:08 2001
 +++ ucsim-0.2.38/Makefile	Thu Mar 29 18:33:25 2001
-@@ -9,8 +9,7 @@
- SHELL		= /bin/sh
- 
- PRJDIR		= .
--PKGS		= cmd.src sim.src s51.src avr.src z80.src doc
--#gui.src
-+PKGS		= cmd.src sim.src s51.src avr.src z80.src doc gui.src
- 
- srcdir          = .
- 
 @@ -33,7 +32,7 @@
  install:
  	$(MAKE) -f main.mk install
@@ -147,34 +137,6 @@ diff -urN ucsim-0.2.38.org/gui.src/Makefile.in ucsim-0.2.38/gui.src/Makefile.in
  	done
  
  
-diff -urN ucsim-0.2.38.org/gui.src/portmon.src/Makefile.in ucsim-0.2.38/gui.src/portmon.src/Makefile.in
---- ucsim-0.2.38.org/gui.src/portmon.src/Makefile.in	Fri Feb 16 17:16:08 2001
-+++ ucsim-0.2.38/gui.src/portmon.src/Makefile.in	Thu Mar 29 18:20:44 2001
-@@ -48,13 +48,13 @@
- # Compiling and installing everything and runing test
- # ---------------------------------------------------
- install: all installdirs
--	$(INSTALL) -s portmon $(bindir)
-+	$(INSTALL) portmon $(DESTDIR)$(bindir)
- 
- 
- # Deleting all the installed files
- # --------------------------------
- uninstall:
--	rm -f $(bindir)/portmon
-+	rm -f $(DESTDIR)$(bindir)/portmon
- 
- 
- # Performing self-test
-@@ -70,7 +70,7 @@
- # Creating installation directories
- # ---------------------------------
- installdirs:
--	test -d $(bindir) || $(INSTALL) -d $(bindir)
-+	test -d $(DESTDIR)$(bindir) || $(INSTALL) -d $(DESTDIR)$(bindir)
- 
- 
- # Creating dependencies
 diff -urN ucsim-0.2.38.org/gui.src/serio.src/Makefile.in ucsim-0.2.38/gui.src/serio.src/Makefile.in
 --- ucsim-0.2.38.org/gui.src/serio.src/Makefile.in	Fri Feb 16 17:16:08 2001
 +++ ucsim-0.2.38/gui.src/serio.src/Makefile.in	Thu Mar 29 18:20:44 2001

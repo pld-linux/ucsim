@@ -1,7 +1,7 @@
 Summary:	Microcontrollers simulator
 Summary(pl):	Symulator mikrokontrolerów
 Name:		ucsim
-Version:	0.2.38
+Version:	0.3.1
 Release:	1
 Epoch:		1
 License:	GPL
