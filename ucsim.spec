@@ -7,7 +7,7 @@ Release:	0.1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://mazsola.iit.uni-miskolc.hu/~drdani/embedded/s51/download/unix/devel/%{name}-%{version}-pre2.tar.bz2
-# Source0-md5:	53d72b7a5a16ba8e671967f721229f19
+# Source0-md5:	9de42afa62a2f33263a3482547aa5d96
 #Patch0:		%{name}-make.patch
 #Patch1:		%{name}-newcmdcl.patch
 URL:		http://mazsola.iit.uni-miskolc.hu/~drdani/embedded/s51/
