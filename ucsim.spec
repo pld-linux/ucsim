@@ -7,6 +7,7 @@ Epoch:		1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://mazsola.iit.uni-miskolc.hu/~drdani/embedded/s51/download/unix/%{name}-%{version}.tar.gz
+# Source0-md5:	9de42afa62a2f33263a3482547aa5d96
 Patch0:		%{name}-make.patch
 Patch1:		%{name}-newcmdcl.patch
 URL:		http://mazsola.iit.uni-miskolc.hu/~drdani/embedded/s51/
