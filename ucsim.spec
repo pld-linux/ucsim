@@ -2,12 +2,13 @@ Summary:	Microcontrollers simulator
 Summary(pl):	Symulator mikrokontrolerów
 Name:		ucsim
 Version:	0.3.1
-Release:	1
+Release:	2
 Epoch:		1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://mazsola.iit.uni-miskolc.hu/~drdani/embedded/s51/download/unix/%{name}-%{version}.tar.gz
-Patch0:		ucsim-make.patch
+Patch0:		%{name}-make.patch
+Patch1:		%{name}-newcmdcl.patch
 URL:		http://mazsola.iit.uni-miskolc.hu/~drdani/embedded/s51/
 BuildRequires:	autoconf
 BuildRequires:	ncurses-devel >= 5.2
@@ -38,12 +39,10 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	docdir=%{_docdir}/%{name}-%{version}
 
-gzip -9nf README TODO
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz doc/*.{html,gif,jpg}
+%doc README TODO doc/*.{html,gif,jpg}
 %attr(755,root,root) %{_bindir}/*
