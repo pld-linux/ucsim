@@ -1,0 +1,11 @@
+diff -uNr ucsim-0.3.1/cmd.src/newcmdcl.h ucsim-0.3.1.new/cmd.src/newcmdcl.h
+--- ucsim-0.3.1/cmd.src/newcmdcl.h	Tue Jun 19 20:36:27 2001
++++ ucsim-0.3.1.new/cmd.src/newcmdcl.h	Fri Jul  5 01:21:26 2002
+@@ -31,6 +31,7 @@
+ 
+ #include "ddconfig.h"
+ 
++#include <sys/types.h>
+ #include <stdio.h>
+ #if FD_HEADER_OK
+ # include HEADER_FD
