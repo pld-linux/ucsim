@@ -1,0 +1,42 @@
+diff -urN ucsim-0.2.38.org/Makefile ucsim-0.2.38/Makefile
+--- ucsim-0.2.38.org/Makefile	Fri Feb 16 17:16:08 2001
++++ ucsim-0.2.38/Makefile	Fri Feb 16 17:21:30 2001
+@@ -33,7 +33,7 @@
+ install:
+ 	$(MAKE) -f main.mk install
+ 	@for pkg in $(PKGS); do\
+-	  $(MAKE) -C $$pkg install ;\
++	  $(MAKE) -C $$pkg DESTDIR=\"$(DESTDIR)\" install ;\
+ 	done
+ 
+ 
+diff -urN ucsim-0.2.38.org/main_in.mk ucsim-0.2.38/main_in.mk
+--- ucsim-0.2.38.org/main_in.mk	Fri Feb 16 17:16:08 2001
++++ ucsim-0.2.38/main_in.mk	Fri Feb 16 17:17:26 2001
+@@ -22,16 +22,16 @@
+ CXXFLAGS        = @CXXFLAGS@ -I$(PRJDIR) -Wall
+ M_OR_MM         = @M_OR_MM@
+ 
+-prefix          = @prefix@
+-exec_prefix     = @exec_prefix@
+-bindir          = @bindir@
+-libdir          = @libdir@
+-datadir         = @datadir@
+-includedir      = @includedir@
+-mandir          = @mandir@
+-man1dir         = $(mandir)/man1
+-man2dir         = $(mandir)/man2
+-infodir         = @infodir@
++prefix          = $(DESTDIR)@prefix@
++exec_prefix     = $(DESTDIR)@exec_prefix@
++bindir          = $(DESTDIR)@bindir@
++libdir          = $(DESTDIR)@libdir@
++datadir         = $(DESTDIR)@datadir@
++includedir      = $(DESTDIR)@includedir@
++mandir          = $(DESTDIR)@mandir@
++man1dir         = $(DESTDIR)$(mandir)/man1
++man2dir         = $(DESTDIR)$(mandir)/man2
++infodir         = $(DESTDIR)@infodir@
+ srcdir          = @srcdir@
+ 
+ OBJECTS         = pobj.o globals.o utils.o
