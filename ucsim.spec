@@ -18,7 +18,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 uCsim can be used to simulate microcontrollers. It supports MCS51 family. AVR
-and Z80 support is under development.          
+and Z80 support is under development.
 
 %description -l pl
 uCsim mo¿e byæ u¿ywany do emulacji mikrokontrolerków. Wspiera on rodzinê
