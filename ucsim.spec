@@ -1,5 +1,5 @@
 Summary:	Microcontrollers simulator
-Summary(pl.UTF-8):   Symulator mikrokontrolerów
+Summary(pl.UTF-8):	Symulator mikrokontrolerów
 Name:		ucsim
 Version:	0.3.1
 Release:	2
