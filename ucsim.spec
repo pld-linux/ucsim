@@ -1,5 +1,5 @@
 Summary:	Microcontrollers simulator
-Summary(pl):	Symulator mikrokontrolerów
+Summary(pl.UTF-8):   Symulator mikrokontrolerÃ³w
 Name:		ucsim
 Version:	0.5.0
 Release:	0.1
@@ -20,9 +20,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 uCsim can be used to simulate microcontrollers. It supports MCS51 family. AVR
 and Z80 support is under development.
 
-%description -l pl
-uCsim mo¿e byæ u¿ywany do emulacji mikrokontrolerków. Wspiera on rodzinê
-MCS51. Obs³uga AVR oraz Z80 jest aktualnie rozwijana.
+%description -l pl.UTF-8
+uCsim moÅ¼e byÄ‡ uÅ¼ywany do emulacji mikrokontrolerkÃ³w. Wspiera on rodzinÄ™
+MCS51. ObsÅ‚uga AVR oraz Z80 jest aktualnie rozwijana.
 
 %prep
 %setup -q -n %{name}-%{version}-pre2
